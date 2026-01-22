@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
-import "./QuoteSection.css";
+import "./quoteSection.css";
 import StarField from "./StarField";
 
 export default function QuoteSection() {
