@@ -1,0 +1,144 @@
+.trust-section {
+  min-height: 100vh;
+  padding: 120px 80px;
+  background: linear-gradient(135deg, #f7f9ff, #eef2ff);
+  text-align: center;
+}
+
+/* INTERACTIVE HEADER */
+.trust-title {
+  font-size: 64px;
+  font-weight: 900;
+  color: #111;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.trust-title span {
+  background: linear-gradient(90deg, #4f5bff, #7b84ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trust-title:hover {
+  text-shadow: 
+    0 0 20px rgba(79,91,255,0.4),
+    0 0 40px rgba(79,91,255,0.3);
+  transform: scale(1.02);
+}
+
+.trust-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin: 12px 0 60px;
+}
+
+/* STATS */
+.trust-counters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.trust-stat {
+  background: white;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.trust-stat:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.trust-stat h3 {
+  font-size: 36px;
+  color: #4f5bff;
+}
+
+.trust-stat span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* MINI GRAPH */
+.stat-bar {
+  height: 6px;
+  background: #e0e5ff;
+  border-radius: 10px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.stat-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #4f5bff, #7b84ff);
+  border-radius: 10px;
+  animation: grow 2s ease forwards;
+}
+
+@keyframes grow {
+  from { width: 0; }
+}
+
+/* TESTIMONIAL (FIXED VISIBILITY) */
+.testimonial-card {
+  max-width: 720px;
+  margin: 0 auto 80px;
+  background: linear-gradient(180deg, #ffffff, #f6f8ff);
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(79,91,255,0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+.testimonial-text {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #111;        /* FORCE DARK */
+  opacity: 1;        /* IMPORTANT */
+}
+
+.testimonial-user strong {
+  display: block;
+  color: #4f5bff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.testimonial-user span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* CTA */
+.trust-cta h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.trust-cta button {
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #4f5bff, #7b84ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.trust-cta button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(79,91,255,0.4);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

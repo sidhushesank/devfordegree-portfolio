@@ -1,0 +1,163 @@
+/* ===============================
+   SERVICES SECTION
+================================ */
+
+.services-section {
+  position: relative;
+  padding: 120px 8%;
+  overflow: hidden;
+  color: #eaeaf0;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.services-header h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.services-header p {
+  max-width: 620px;
+  font-size: 18px;
+  color: rgba(220, 220, 235, 0.75);
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.services-grid {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===============================
+   VISION PRO STYLE CARDS
+================================ */
+
+.service-card {
+  position: relative;
+  padding: 36px;
+  border-radius: 22px;
+
+  /* Invisible-by-default surface */
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.5s ease,
+    border 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* soft light edge */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    120% 120% at top left,
+    rgba(120, 140, 255, 0.12),
+    transparent 60%
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ===============================
+   CARD CONTENT
+================================ */
+
+.service-card .index {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: rgba(180, 190, 255, 0.6);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(220, 220, 240, 0.75);
+}
+
+.service-card .cta {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #9fb4ff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* ===============================
+   FOCUS STATE (THE MAGIC)
+================================ */
+
+.service-card:hover {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.04)
+  );
+
+  border: 1px solid rgba(160, 180, 255, 0.35);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.service-card:hover .cta {
+  opacity: 1;
+}
+
+/* ===============================
+   TRUST ROW
+================================ */
+
+.trust-row {
+  margin-top: 120px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+}
+
+.trust-row strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.trust-row p {
+  font-size: 14px;
+  color: rgba(220, 220, 235, 0.65);
+}

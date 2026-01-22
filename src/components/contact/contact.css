@@ -1,0 +1,135 @@
+.contact-section {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #120000, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* DAREDEVIL HEADER */
+.contact-title {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #ff1a1a;
+  text-shadow:
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 60px rgba(255, 0, 0, 0.4);
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+  animation: glitch 4s infinite;
+}
+
+.contact-title span {
+  color: #fff;
+}
+
+.contact-title:hover {
+  transform: scale(1.05);
+  text-shadow:
+    0 0 30px red,
+    0 0 80px darkred;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  20% { text-shadow: -2px 0 darkred; }
+  40% { text-shadow: 2px 2px red; }
+  60% { text-shadow: -2px -2px darkred; }
+  100% { text-shadow: 2px 0 red; }
+}
+
+.contact-subtitle {
+  color: #aaa;
+  margin: 16px 0 60px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-row {
+  text-align: left;
+}
+
+.contact-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #ff4d4d;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 18px;
+  background: rgba(255, 0, 0, 0.03);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: red;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* BLOOD BUTTON */
+.contact-btn {
+  margin-top: 30px;
+  padding: 18px;
+  border-radius: 40px;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff0000, #600000);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 0 30px red,
+    0 0 80px darkred;
+}
+
+/* STATUS */
+.contact-status {
+  margin-top: 24px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ff4d4d;
+  animation: fadeIn 0.5s ease;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
