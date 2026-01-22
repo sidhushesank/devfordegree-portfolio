@@ -1,4 +1,4 @@
-import "./services.css";
+import "./Services.css";
 import servicesData from "../../data/servicesData";
 import AuroraCanvas from "./AuroraCanvas";
 
