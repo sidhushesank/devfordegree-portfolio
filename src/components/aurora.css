@@ -1,0 +1,39 @@
+.aurora-wrapper {
+  position: absolute;
+  inset: -40%;
+  z-index: 0;
+  overflow: hidden;
+  filter: blur(80px);
+}
+
+.aurora {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.aurora-1 {
+  background: radial-gradient(circle at 30% 30%, #3b82f6, transparent 60%);
+}
+
+.aurora-2 {
+  background: radial-gradient(circle at 70% 40%, #8b5cf6, transparent 60%);
+  animation-duration: 22s;
+}
+
+.aurora-3 {
+  background: radial-gradient(circle at 50% 70%, #22c55e, transparent 60%);
+  animation-duration: 26s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(-5%, -5%) scale(1);
+  }
+  to {
+    transform: translate(5%, 5%) scale(1.15);
+  }
+}

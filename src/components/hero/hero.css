@@ -1,0 +1,175 @@
+/* =========================
+   HERO WRAPPER
+========================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at center, #0e1015, #07080b);
+  overflow: hidden;
+}
+.hero-title {
+  display: flex;
+  flex-direction: column; /* ✅ one word per line */
+  gap: 0.2rem;
+}
+
+
+/* =========================
+   THREE.JS CANVAS (BACKGROUND)
+========================= */
+.hero canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+  opacity: 0.75;
+  will-change: transform;
+}
+
+/* =========================
+   TOP-RIGHT LOGO
+========================= */
+.hero-logo {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  height: 42px;
+  z-index: 3;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 8%;
+  max-width: 720px;
+  padding-top: 22vh;
+  pointer-events: none;
+}
+
+/* =========================
+   NAME
+========================= */
+.hero-name {
+  display: inline-block;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+/* =========================
+   MAIN HEADING
+========================= */
+.hero-content h1 {
+  font-size: 3.8rem;
+  line-height: 1.1;
+  /* ❌ REMOVED white color */
+}
+
+.hero-title {
+  pointer-events: auto;
+}
+
+/* 🔥 HERO WORD STYLE (THIS FIXES IT) */
+.hero-word {
+  display: inline-block; /* animation-safe */
+  color: #9AEAFF;
+  text-shadow: 0 0 14px rgba(90, 215, 255, 0.45);
+  will-change: transform, color;
+  cursor: default;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+.hero-content p {
+  margin-top: 1rem;
+  max-width: 520px;
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  pointer-events: auto;
+}
+
+.primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 26px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(90, 215, 255, 0.25);
+}
+
+.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #333;
+  padding: 12px 26px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.secondary:hover {
+  border-color: #555;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 18vh;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-logo {
+    height: 34px;
+    right: 20px;
+  }
+
+  .hero canvas {
+    opacity: 0.55;
+  }
+}
+/* Daredevil pulse */
+.pulse-red {
+  animation: pulseRed 1.5s ease;
+}
+
+@keyframes pulseRed {
+  0% { box-shadow: 0 0 0 rgba(255,0,0,0); }
+  50% { box-shadow: 0 0 80px rgba(255,0,0,0.8); }
+  100% { box-shadow: 0 0 0 rgba(255,0,0,0); }
+}
+
+/* Services hologram focus */
+.services-focus {
+  filter: brightness(1.25) contrast(1.2);
+  transform: scale(1.02);
+  transition: 0.6s ease;
+}

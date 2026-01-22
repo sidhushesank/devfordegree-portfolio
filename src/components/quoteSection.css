@@ -1,0 +1,39 @@
+.quote-section {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  width: 100%;
+  background: radial-gradient(
+    60% 80% at 50% 50%,
+    rgba(40, 120, 255, 0.12),
+    #05070c 70%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-content {
+  text-align: center;
+  color: white;
+}
+
+.quote-line {
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin: 0 auto 18px;
+  background: linear-gradient(90deg, #5ad7ff, #5227ff);
+  box-shadow: 0 0 14px rgba(90, 215, 255, 0.6);
+}
+
+.quote-text {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  cursor: default;
+}
+
+.quote-text span {
+  transition: color 0.3s ease;
+}
