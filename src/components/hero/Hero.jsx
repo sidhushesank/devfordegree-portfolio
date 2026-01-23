@@ -3,7 +3,7 @@ import anime from "animejs";
 import HeroScene from "./HeroScene";
 import "./hero.css";
 
-export default function Hero() {
+export default function Hero() { 
   const nameRef = useRef(null);
   const titleRef = useRef(null);
 
@@ -89,8 +89,19 @@ export default function Hero() {
       {/* 3D Background */}
       <HeroScene />
 
-      {/* Logo */}
-      <img src="/logo.jpeg" alt="DevForDegree" className="hero-logo" />
+      {/* INTERACTIVE HUD LOGO */}
+      <div
+        className="hero-logo-wrapper"
+        onClick={() => {
+          const logo = document.querySelector(".hero-logo");
+          logo.classList.add("glitch");
+          setTimeout(() => logo.classList.remove("glitch"), 400);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        <img src="/logo.jpeg" alt="DevForDegree" className="hero-logo" />
+        <span className="logo-scanline" />
+      </div>
 
       {/* Content */}
       <div className="hero-content">
@@ -114,16 +125,15 @@ export default function Hero() {
             Get Project Help
           </button>
           <button
-  className="secondary"
-  onClick={() => {
-    document.getElementById("services")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }}
->
-  View Services
-</button>
-
+            className="secondary"
+            onClick={() => {
+              document.getElementById("services")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            View Services
+          </button>
         </div>
       </div>
     </section>

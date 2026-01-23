@@ -6,6 +6,7 @@ import HowItWorks from "./components/process/HowItWorks";
 import Trust from "./components/trust/Trust";
 import Contact from "./components/contact/Contact";
 import Services from "./components/services/Services";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Trust />
       <Services />
       <Contact />   {/* 👈 form here */}
+      <Footer />
     </>
   );
 }
