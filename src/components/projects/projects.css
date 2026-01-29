@@ -79,6 +79,7 @@
   display: flex;
   gap: 10px;
   margin: 0 20px 10px;
+  flex-wrap: wrap;
 }
 
 .tech-stack span {
@@ -121,4 +122,49 @@
 .project-links a:hover {
   background: #ff2d2d;
   color: black;
+}
+
+/* =========================
+   RULE 3: MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+
+  .projects-section {
+    padding: 80px 20px;
+  }
+
+  .projects-title {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .projects-subtitle {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;   /* 🔥 ONE CARD PER ROW */
+    gap: 24px;
+  }
+
+  .project-image {
+    height: 200px;               /* bigger preview */
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links a {
+    padding: 12px;
+  }
 }

@@ -142,3 +142,49 @@
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+/* ===== MOBILE FIX FOR TRUST SECTION ===== */
+
+@media (max-width: 768px) {
+
+  .trust-section {
+    padding: 80px 20px;
+  }
+
+  .trust-title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .trust-subtitle {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .trust-counters {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .trust-stat h3 {
+    font-size: 28px;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+    padding: 28px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+
+  .trust-cta h3 {
+    font-size: 22px;
+  }
+
+  .trust-cta button {
+    width: 100%;
+    max-width: 280px;
+  }
+}

@@ -1,6 +1,6 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 /* =========================
@@ -56,11 +56,9 @@ function Stars() {
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
 
-    /* 🌊 Parallax (mouse-based depth movement) */
     ref.current.rotation.y = mouse.x * 0.15;
     ref.current.rotation.x = mouse.y * 0.1;
 
-    /* ✨ Twinkle (pulse opacity smoothly) */
     materialRef.current.opacity = 0.65 + Math.sin(t * 1.5) * 0.25;
   });
 
@@ -77,7 +75,7 @@ function Stars() {
 
       <pointsMaterial
         ref={materialRef}
-        size={0.28}               // 🔥 visible stars
+        size={0.28}
         color="#9fe7ff"
         transparent
         opacity={0.8}
@@ -88,9 +86,18 @@ function Stars() {
 }
 
 /* =========================
-   SCENE
+   SCENE (MOBILE SAFE)
 ========================= */
 export default function HeroScene() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  // 🔥 RULE 1: Disable 3D on mobile
+  if (isMobile) return null;
+
   return (
     <Canvas
       camera={{ position: [0, 0, 7], fov: 45 }}

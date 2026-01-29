@@ -111,3 +111,33 @@ small {
   bottom: 20px;
   opacity: 0.6;
 }
+/* ===== MOBILE FIX FOR HOW IT WORKS ===== */
+
+@media (max-width: 768px) {
+
+  .how-section {
+    padding: 80px 20px;
+  }
+
+  .how-title {
+    font-size: 36px;
+  }
+
+  .how-subtitle {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .flip-inner {
+    height: 220px;
+  }
+
+  .step-number {
+    font-size: 48px;
+  }
+}

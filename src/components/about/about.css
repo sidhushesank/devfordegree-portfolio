@@ -266,3 +266,77 @@
     width: 0;
   }
 }
+/* =========================
+   MOBILE FIRST FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 80px 24px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Text */
+  .about-cinematic-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .about-text h2 {
+    font-size: 40px;
+  }
+
+  .about-text p,
+  .about-cinematic-quote {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* Cards */
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    min-height: auto;
+  }
+
+  /* Stats */
+  .about-stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .stat-card {
+    min-width: 100%;
+  }
+
+  /* 3D Model */
+  .about-model {
+    height: 320px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+  .about-section {
+    padding: 64px 16px;
+  }
+
+  .about-cinematic-title {
+    font-size: 1.9rem;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+}
